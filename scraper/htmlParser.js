@@ -1,7 +1,7 @@
 // require cheerio to parse HTML and find elements
 const cheerio = require('cheerio');
 // require the db for data scraping
-//const db = require('../models');
+const db = require('../models');
 
 module.exports = function(html, tag) {
     return new Promise((resolve, reject) => {
