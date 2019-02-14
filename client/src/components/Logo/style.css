@@ -1,0 +1,5 @@
+.logo {
+    border-radius: 50%;
+    width: 6.25%;
+    /* width: 11.0625%; returns a width of 80px on my browser */
+}
