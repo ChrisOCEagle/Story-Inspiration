@@ -4,6 +4,8 @@ const express = require('express');
 const session = require('express-session');
 // require passport as configured
 const passport = require('./config/passport.js');
+// require path for serving up React
+const path = require('path');
 
 // set up the port
 const PORT = process.env.PORT || 3001;
@@ -36,6 +38,7 @@ app.use(passport.session());
 
 // require the api routes
 require('./routes/api-routes')(app);
+app.use((req, res) => res.sendFile(path.join(__dirname, '../client/build/index.html')));
 
 // sync to the database
 db.sequelize.sync().then(() => {
