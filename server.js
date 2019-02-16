@@ -38,7 +38,7 @@ app.use(passport.session());
 
 // require the api routes
 require('./routes/api-routes')(app);
-app.use((req, res) => res.sendFile(path.join(__dirname, '../client/build/index.html')));
+app.use((req, res) => res.sendFile(path.join(__dirname, 'client/build/index.html')));
 
 // sync to the database
 db.sequelize.sync().then(() => {
