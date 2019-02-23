@@ -1,9 +1,13 @@
 import React from 'react';
-import logo from './story-prompt-logo.gif';
+import logo from './story-prompt-logo.png';
+import './style.css';
 
 function Logo(props) {
     return(
-        <img src={logo} alt='story-prompt-logo' className='logo' style={props.styles}/>
+        <div className={props.className}>
+            <img src={logo} alt={props.alt}/>
+            <p>{props.children}</p>
+        </div>
     );
 };
 

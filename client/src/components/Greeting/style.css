@@ -1,0 +1,9 @@
+#greeting {
+    width: 75%;
+    padding: 25px;
+    font-size: 25px;
+    color: white;
+    margin: auto 15px auto 0;
+    white-space: nowrap;
+    border-radius: 25%;
+}

@@ -1,5 +1,19 @@
-.logo {
+.logo > img {
     border-radius: 50%;
-    width: 6.25%;
-    /* width: 11.0625%; returns a width of 80px on my browser */
+    margin: 5px;
+    width: 55px;
+    height: 55px;
+}
+
+.logo > p {
+    margin: 0;
+    padding: 0;
+    font-size: 35px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    /* max-width: 1000px; */
 }

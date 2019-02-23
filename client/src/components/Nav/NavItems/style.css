@@ -1,6 +1,5 @@
 .nav-items {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 17%;
+    justify-content: space-between;
+    align-content: center;
 }

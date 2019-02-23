@@ -1,44 +1,40 @@
 import React from 'react';
-import Button from '../../Button';
 import Greeting from '../../Greeting';
+import Button from '../../Button';
+import './style.css';
 
 function NavItems(props) {
-    const { pathname } = props.history.location;
-    const { toggleModal, formChoice, logout, confirm, styles } = props;
-    return(
-        <div className='nav-items' style={styles.nav.navItems}>
-            {
-                pathname === '/'
-                ?   <Button
-                        id='login'
-                        name='Log-in'
-                        clickEvent1={toggleModal}
-                        clickEvent2={formChoice}
-                        children='Log-in'
-                        styles={styles.buttons.login}
-                    />
-                :   <Greeting confirm={confirm} styles={styles.nav.greeting}/>
-            }
-            {
-                pathname === '/'
-                ?   <Button
-                        id='signup'
-                        name='Sign-up'
-                        clickEvent1={toggleModal}
-                        clickEvent2={formChoice}
-                        children='Sign-up'
-                        styles={styles.buttons.signup}
-                    />
-                :   <Button
-                        id='logout'
-                        name='Log-out'
-                        clickEvent1={logout}
-                        children='Log-out'
-                        styles={styles.buttons.logout}
-                    />
-            }
-        </div>
-    );
+    if (props.history.location.pathname === '/') {
+        return(
+            <div className={props.className}>
+                <Button
+                    className='btn'
+                    id='login'
+                    name='Log-in'
+                    clickEvent1={props.toggleModal}
+                    clickEvent2={props.formChoice}
+                >
+                    Log-in
+                </Button>
+                <Button
+                    className='btn'
+                    id='signup'
+                    name='Sign-up'
+                    clickEvent1={props.toggleModal}
+                    clickEvent2={props.formChoice}
+                >
+                    Sign-up
+                </Button>
+            </div>
+        );
+    } else {
+        return(
+            <div className={props.className}>
+                <Greeting confirm={props.confirm} id='greeting'/>
+                <Button className='btn' id='logout' name='Log-out' clickEvent1={props.logout}>Log-out</Button>
+            </div>
+        );
+    }
 };
 
 export default NavItems;

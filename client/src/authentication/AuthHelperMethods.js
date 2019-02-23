@@ -65,7 +65,6 @@ export default class AuthHelperMethods {
         // set the authorization header
         // Authorization: Bearer xxxxxxx.xxxxxxxx.xxxxxx
         if (this.loggedIn()) {
-            console.log("Bearer " + this.getToken())
             headers['Authorization'] = 'Bearer ' + this.getToken();
         }
 

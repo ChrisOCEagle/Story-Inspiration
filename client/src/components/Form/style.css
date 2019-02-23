@@ -1,0 +1,35 @@
+#forgot-password > h5 {
+    margin: 0 0 15%;
+}
+
+form.story{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    max-width: 780px;
+}
+
+form.story > .form-group {
+    padding: 10px;
+}
+
+.submit-btn {
+    float: right;
+    margin: 10px 0;
+}
+
+#checkbox {
+    display: flex;
+    justify-content: space-between;
+    width: 13%;
+    max-width: 65px;
+}
+
+#save-story {
+    align-self: flex-end;
+    padding: 1px 6px;
+    margin: 10px 65px 10px 0;
+}

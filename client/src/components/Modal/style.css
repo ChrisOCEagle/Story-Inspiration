@@ -44,6 +44,27 @@
     border-radius: 5%;
 }
 
-.close-button:hover {
+#close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+    font-size: 200%;
+    border-radius: 50%;
+}
+
+#close:hover {
     background-color: gray;
+}
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import IndexPage from './pages/Index';
 import Members from './pages/Members';
+import './style.css';
 
 function App() {
     return(

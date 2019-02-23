@@ -1,12 +1,34 @@
-/* .btn {
-    border-radius: 10%;
+button.btn {
+    white-space: nowrap;
+    margin: auto 5px;
     padding: 10px;
-    height: 100%;
-    width: 50%;
-    margin: 0 3%;
-} */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    background-color: gainsboro;
+    border-radius: 25%;
+}
 
-.btn:hover {
-    background-color: silver;
-    border-color: silver;
+button.btn:hover {
+    background-color: gainsboro;
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.4);
+    border-radius: 25%;
+}
+
+a.prompt {
+    text-decoration: none;
+    color: initial;
+}
+
+a.prompt:hover {
+    text-decoration: underline;
+    color: blueviolet;
+}
+
+a.story-prompt {
+    text-decoration: none;
+    color: initial;
+}
+
+a.story-prompt:hover {
+    text-decoration: underline;
+    color: blueviolet;
 }

@@ -1,19 +1,19 @@
 import React from 'react';
 import Logo from '../../Logo';
 import NavItems from '../NavItems';
+import './style.css';
 
 function Navbar(props) {
-    const { history, toggleModal, formChoice, logout, confirm, styles } = props;
     return(
-        <nav className='nav' style={styles.nav.navbar}>
-            <Logo styles={styles.nav.logo}/>
+        <nav className={props.className}>
+            <Logo className='logo' alt='story-prompt-logo' children='WriteSpire'/>
             <NavItems
-                history={history}
-                toggleModal={toggleModal}
-                formChoice={formChoice}
-                logout={logout}
-                confirm={confirm}
-                styles={styles}
+                history={props.history}
+                confirm={props.confirm}
+                formChoice={props.formChoice}
+                logout={props.logout}
+                toggleModal={props.toggleModal}
+                className='nav-items'
             />
         </nav>
     );

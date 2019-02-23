@@ -1,0 +1,41 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 3px 6px 12px 2px rgba(0, 0, 0, 0.2);
+    background-color: #ffc;
+    margin: 10px auto;
+    width: 60%;
+    padding: 20px;
+}
+
+.card-title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.card-overlay {
+    width: 100%;
+}
+
+.prompt-body {
+    width: 70%;
+    align-self: center;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.story-title {
+    width: 80%;
+    align-self: center;
+    justify-content: space-between;
+    margin: 10px auto;
+}
+
+.story-body {
+    width: 60%;
+    align-self: center;
+    justify-content: center;
+    margin: 10px auto;
+}

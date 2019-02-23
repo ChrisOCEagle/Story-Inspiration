@@ -15,6 +15,13 @@ module.exports = function(app) {
         }).then(dbUser => res.json(createToken(dbUser.username, dbUser.id)));
     });
 
+    app.post('/api/user', (req, res) => {
+        db.User.findOne({ 
+            where: { username: req.body.username }
+        }).then(dbUser => res.json(dbUser.username))
+        .catch(err => res.json(err));
+    });
+
     function createToken(username, id) {
         let token = jwt.sign(
             {
@@ -71,17 +78,16 @@ module.exports = function(app) {
         .catch(err => console.log(err));
     });
 
-    app.get('/api/story-prompt/:user_id/:prompt_id', (req, res) => {
-        const { user_id, prompt_id } = req.params;
-        db.Stories.findOne({ where: { UserId: user_id, id: prompt_id } })
+    app.get('/api/story-prompt/:prompt_id', (req, res) => {
+        const { prompt_id } = req.params;
+        db.Stories.findOne({ where: { id: prompt_id, share: true } })
         .then(dbStory => res.json(dbStory))
         .catch(err => console.log(err));
     });
 
-    app.get('/api/stories/:prompt_id', (req, res) => {
-        const { prompt_id } = req.params;
+    app.get('/api/stories/', (req, res) => {
         db.Stories
-        .findAll({ where: { PromptId: prompt_id, share: true } })
+        .findAll({ where: { share: true } })
         .then(dbStory => res.json(dbStory))
         .catch(err => console.log(err));
     });

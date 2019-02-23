@@ -1,8 +1,9 @@
 import React from 'react';
+import './style.css';
 
 function Greeting(props) {
     return(
-        <div id='greeting' style={props.styles}>Welcome, {props.confirm.username}</div>
+        <div id={props.id}>Welcome, {props.confirm.username}</div>
     );
 };
 

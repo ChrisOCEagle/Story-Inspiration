@@ -1,9 +1,9 @@
 import React from 'react';
+import './style.css';
 
 function Section(props) {
-    const { children, styles } = props;
     return(
-        <p className='section' style={styles}>{children}</p>
+        <p className='section'>{props.children}</p>
     );
 };
 
