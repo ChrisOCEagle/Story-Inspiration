@@ -129,17 +129,17 @@ class Members extends Component {
 
     handlePromptDetailsButton = prompt => {
         if (this.state.showPrompt && this.state.promptCard === prompt.id) {
-            return <div>&#709;</div>;
-        } else {
             return <div>&#708;</div>;
+        } else {
+            return <div>&#709;</div>;
         };
     };
 
     handleStoryDetailsButton = prompt => {
         if (this.state.showStory && this.state.storyCard === prompt.id) {
-            return <div>&#709;</div>;
-        } else {
             return <div>&#708;</div>;
+        } else {
+            return <div>&#709;</div>;
         };
     };
 

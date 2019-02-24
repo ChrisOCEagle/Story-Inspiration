@@ -6,6 +6,8 @@ form.story{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80%;
+    margin: 10px auto;
 }
 
 .form {
@@ -31,5 +33,5 @@ form.story > .form-group {
 #save-story {
     align-self: flex-end;
     padding: 1px 6px;
-    margin: 10px 65px 10px 0;
+    margin: 10px 50px 10px 0;
 }
