@@ -192,7 +192,7 @@ class Members extends Component {
                                                     href={'/prompt/' + prompt.id}
                                                     headerName='h3'
                                                 >
-                                                    &raquo; {prompt.title}
+                                                    {prompt.title} &laquo;
                                                 </Button>
                                                 <Button
                                                     className='btn'
@@ -217,8 +217,18 @@ class Members extends Component {
                                                 this.state.storyPrompts.map((storyPrompt, key) => (
                                                     <div key={key}>
                                                         {prompt.id === storyPrompt.PromptId ?
-                                                            <div className='story-prompts'>
-                                                                <Wrapper
+                                                            <div
+                                                                className={this.state.showPrompt && this.state.promptCard === prompt.id ? 'story-prompts card' : 'story-prompts'}
+                                                                style={this.state.showPrompt && this.state.promptCard === prompt.id ?
+                                                                    {
+                                                                        width: '95%',
+                                                                        margin: '10px 0',
+                                                                        boxShadow: '4px 8px 16px 3px rgba(0, 0, 0, 0.3)',
+                                                                        backgroundColor: '#ffd',
+                                                                    } :
+                                                                    {}}
+                                                            >
+                                                            <Wrapper
                                                                     className='story-title'
                                                                     id='card'
                                                                     style={this.state.showPrompt && this.state.promptCard === prompt.id ? { display: 'flex' } : {}}
@@ -230,7 +240,7 @@ class Members extends Component {
                                                                         headerName='h3'
                                                                         href={'/story/' + storyPrompt.id}
                                                                     >
-                                                                        >> {storyPrompt.title}
+                                                                        {storyPrompt.title} &laquo;
                                                                     </Button>
                                                                     <Button
                                                                         className='btn'

@@ -87,6 +87,7 @@ class Input extends Component {
                     value={this.props.value}
                     onChange={this.props.onChange}
                     defaultChecked={this.props.default}
+                    style={{cursor: "pointer"}}
                 />
             );
         } else if (this.props.className === 'input') {

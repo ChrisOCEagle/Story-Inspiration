@@ -25,13 +25,20 @@ form.story > .form-group {
 
 #checkbox {
     display: flex;
+    margin: 0 32px;
     justify-content: space-between;
-    width: 13%;
+    align-self: flex-start;
+    width: 10%;
     max-width: 65px;
 }
 
 #save-story {
-    align-self: flex-end;
-    padding: 1px 6px;
-    margin: 10px 50px 10px 0;
+    padding: 5px 20px;
+    border-radius: 5%;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+#save-story:hover {
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
 }

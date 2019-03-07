@@ -170,21 +170,22 @@ class Form extends Component {
                     </div>
                     <div className='form-group'>
                         <Label htmlFor='title' children='Title'/><br/>
-                        <Input className='input' name='title' type='text' size='50' value={this.state.title} onChange={this.handleChange}/>
+                        <Input className='input' name='title' type='text' size='70' value={this.state.title} onChange={this.handleChange}/>
                     </div>
                     <div className='form-group'>
                         <Label htmlFor='body' children='Story'/><br/>
                         <Input className='textarea' name='body' rows='15' cols='80' type='text' value={this.state.body} onChange={this.handleChange}/>
                     </div>
                     <div className='form-group' id='checkbox'>
-                        <Label htmlFor='share' children='Share'/>
                         <Input
                             className='checkbox'
                             name='share'
+                            id='share'
                             type='checkbox'
                             value={this.state.share}
                             onChange={this.handleCheckboxChange}
                         />
+                        <Label htmlFor='share' children='Share'/>
                     </div>
                     <button name='save' className={this.props.className + ' submit-btn'} id='save-story' onClick={this.handleFormSubmit}>
                         Save
