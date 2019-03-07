@@ -26,6 +26,14 @@
     margin: 10px 0;
 }
 
+.image-prompt {
+    width: 70%;
+    height: 70%;
+    align-self: flex-start;
+    justify-content: center;
+    margin: 10px 0;
+}
+
 .story-prompts {
     display: flex;
     flex-direction: column;

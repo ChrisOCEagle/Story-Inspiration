@@ -204,13 +204,13 @@ class Members extends Component {
                                                 />
                                             </div>
                                             <Wrapper
-                                                className='prompt-body'
+                                                className={prompt.text ? 'prompt-body' : 'image-prompt'}
                                                 id='card'
                                                 style={this.state.showPrompt && this.state.promptCard === prompt.id ? { display: 'flex' } : {}}
                                             >
                                                 {prompt.text ?
                                                     <Section>{prompt.text}</Section> :
-                                                    <img src={prompt.src} alt={prompt.alt} />
+                                                    <img src={prompt.src} alt={prompt.alt} style={{width: '100%', height: '100%'}}/>
                                                 }
                                             </Wrapper>
                                             {this.state.storyPrompts.length > 0 ?
@@ -288,7 +288,7 @@ class Members extends Component {
                                         {
                                             this.state.prompt && this.state.prompt.text ? this.state.prompt.text :
                                             this.state.story && this.state.story.story ? this.state.story.story :
-                                            <img src={this.state.prompt.src} alt={this.state.prompt.alt}/>
+                                            <img src={this.state.prompt.src} alt={this.state.prompt.alt} style={{width: '100%', height: '100%'}}/>
                                         }
                                     </Section>
                                 </Row>
